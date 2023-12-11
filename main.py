@@ -3,7 +3,7 @@ import datetime
 import bot
 import utils
 
-TOKEN = "MTE4MzgzOTY4MzEzMDY5MTY2Ng.GumYk1.8KhBANzStNAQLeVyJrEKHrp2TBvWzyf7g0PuVM"
+TOKEN = "TOKEN"
 
 client = bot.init()
 
