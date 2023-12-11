@@ -14,3 +14,7 @@ recommend python 3.10.6 or later...
 
 `.stop` - stops playback and sets queue position to end
 
+# version history
+
+0.5.0 - initial release
+
