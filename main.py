@@ -3,7 +3,7 @@ import datetime
 import bot
 import utils
 
-TOKEN = "TOKEN"
+TOKEN = "MTE4MzgzOTY4MzEzMDY5MTY2Ng.GWi6RX.6uHbcTlKJYkBDpNviyyZ2d5ySorekI3qsDik84"
 
 client = bot.init()
 
@@ -19,8 +19,8 @@ async def on_message(message:discord.Message):
         return
 
     msg = message.content
-    #bot is invoked with . prefix
-    if msg.startswith('.') and len(msg)>1:
+    #bot is invoked with $ prefix
+    if msg.startswith('$') and len(msg)>1:
         msg = message.content[1:].split()
         command = msg[0]
         params = msg[1:]

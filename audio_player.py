@@ -14,8 +14,16 @@ class AudioPlayer:
         self.queue_position+=1
         
         
-async def get_url(video_link):
-    Id = video_link.split("v=")[1]
+async def get_url(video_link:str):
+    Id = -1
+    if video_link.find(".be") != -1:
+        # youtube short url
+        Id = video_link.split(".be/")[1]
+        
+    else:    
+        Id = video_link.split("v=")[1]
+    if Id == -1:
+        return "failed"
     #stream = pytube.YouTube.from_id(video_id=Id).streams
     itag_list = [141,140,139,251,171,250,249]#These are the lists of itags that can be played by ffmpeg.
     for itag in itag_list:
