@@ -8,6 +8,7 @@ from yt_dlp import YoutubeDL
 import pytube
 from discord.ext import tasks
 import asyncio
+import baa
 # note: must install master version from youtube dl manually
 # pip install --force-reinstall https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz
 
@@ -28,6 +29,14 @@ async def process_command(message:discord.Message,command:str,params:list[str]):
     match command:
         case "hello":
             await message.reply("hello!")
+        case "baa2eng":
+            sent = " ".join(params)
+            converted = baa.convertSentence(sent,True)
+            await message.reply(f">>> {converted}")
+        case "eng2baa":
+            sent = "  ".join(params)
+            converted = baa.convertSentence(sent,False)
+            await message.reply(f">>> {converted}")
         case "join":
             await join_vc(message)
         #case "leave":

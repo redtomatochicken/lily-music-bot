@@ -2,8 +2,9 @@ import discord
 import datetime
 import bot
 import utils
+import commands
 
-TOKEN = "TOKEN"
+TOKEN = ""
 
 client = bot.init()
 
@@ -11,6 +12,13 @@ client = bot.init()
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
     bot.audioPlayerUpdate.start()
+    
+    try:
+        tree = discord.app_commands.CommandTree(client)
+        commands.add_commands(tree)
+        await tree.sync()
+    except discord.errors.ClientException:
+            pass
 
 @client.event
 async def on_message(message:discord.Message):
