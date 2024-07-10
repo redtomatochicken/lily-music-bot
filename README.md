@@ -1,6 +1,6 @@
-# lily music bot
+# lily  bot
 
-a cute custom music bot for discord
+a cute bot for discord
 
 recommend python 3.10.6 or later...
 
@@ -15,6 +15,8 @@ recommend python 3.10.6 or later...
 `.stop` - stops playback and sets queue position to end
 
 # version history
+
+0.6.0 - 2024.07 - added baa
 
 0.5.0 - initial release
 
