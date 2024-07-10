@@ -6,6 +6,10 @@ recommend python 3.10.6 or later...
 
 # usage
 
+`.baa2eng [string]` - baa convert to english
+
+`.eng2baa [string]` - english convert to baa
+
 `.p [list of urls]` `.play [list of urls]` - play a song
 
 `.q` `.queue` - show the queue and currently playing song
